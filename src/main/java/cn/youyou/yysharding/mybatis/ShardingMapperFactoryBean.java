@@ -1,11 +1,11 @@
-package cn.youyou.yysharding;
+package cn.youyou.yysharding.mybatis;
 
-import cn.youyou.yysharding.demo.User;
+import cn.youyou.yysharding.engine.ShardingContext;
+import cn.youyou.yysharding.engine.ShardingResult;
+import cn.youyou.yysharding.demo.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
-import org.apache.ibatis.session.Configuration;
-import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.mapper.MapperFactoryBean;
 
 import java.lang.reflect.Proxy;
@@ -15,7 +15,7 @@ import java.lang.reflect.Proxy;
  *
  * 技巧：使用FactoryBean
  * FactoryBean其实是一个工厂Bean，它负责为spring容器创建一个Bean，bean的创建逻辑在方法getObject()中实现。
- * 这里这个Bean是Mapper接口的代理对象（实现类），目的是为。
+ * 这里这个Bean是Mapper接口的代理对象（实现类），目的是为mapper的方法进行增强，在执行方法前，完成分库分表的计算。
  *
  * @param <T>
  */

@@ -1,5 +1,10 @@
-package cn.youyou.yysharding;
+package cn.youyou.yysharding.config;
 
+import cn.youyou.yysharding.datasource.ShardingDataSource;
+import cn.youyou.yysharding.engine.ShardingEngine;
+import cn.youyou.yysharding.engine.StandardShardingEngine;
+import cn.youyou.yysharding.mybatis.SqlStatementInterceptor;
+import cn.youyou.yysharding.strategy.ShardingStrategy;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
@@ -14,6 +19,16 @@ public class ShardingAutoConfiguration {
     @Bean
     public ShardingDataSource shardingDataSource(ShardingProperties properties) {
         return new ShardingDataSource(properties);
+    }
+
+    @Bean
+    public ShardingEngine shardingEngine(ShardingProperties properties) {
+        return new StandardShardingEngine(properties);
+    }
+
+    @Bean
+    public SqlStatementInterceptor sqlStatementInterceptor() {
+        return new SqlStatementInterceptor();
     }
 
 }

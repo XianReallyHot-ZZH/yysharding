@@ -1,7 +1,9 @@
-package cn.youyou.yysharding;
+package cn.youyou.yysharding.demo;
 
-import cn.youyou.yysharding.demo.User;
-import cn.youyou.yysharding.demo.UserMapper;
+import cn.youyou.yysharding.config.ShardingAutoConfiguration;
+import cn.youyou.yysharding.mybatis.ShardingMapperFactoryBean;
+import cn.youyou.yysharding.demo.model.User;
+import cn.youyou.yysharding.demo.mapper.UserMapper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;

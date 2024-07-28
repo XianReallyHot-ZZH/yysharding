@@ -1,4 +1,4 @@
-package cn.youyou.yysharding;
+package cn.youyou.yysharding.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

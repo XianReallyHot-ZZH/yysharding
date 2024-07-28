@@ -1,5 +1,6 @@
-package cn.youyou.yysharding.demo;
+package cn.youyou.yysharding.demo.mapper;
 
+import cn.youyou.yysharding.demo.model.User;
 import org.apache.ibatis.annotations.*;
 
 @Mapper

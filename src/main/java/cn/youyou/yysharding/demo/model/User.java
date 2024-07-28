@@ -1,4 +1,4 @@
-package cn.youyou.yysharding.demo;
+package cn.youyou.yysharding.demo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

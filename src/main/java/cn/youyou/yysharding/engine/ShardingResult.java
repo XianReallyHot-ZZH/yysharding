@@ -1,4 +1,4 @@
-package cn.youyou.yysharding;
+package cn.youyou.yysharding.engine;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ShardingResult {
 
-    // 分片结果对应的数据源名称，比如mysql的话，对应的就是database
+    // （分库结果）分片结果对应的数据源名称，比如mysql的话，对应的就是database
     String targetDataSourceName;
 
 }
