@@ -44,7 +44,7 @@ public class ShardingDataSource extends AbstractRoutingDataSource {
     protected Object determineCurrentLookupKey() {
         ShardingResult shardingResult = ShardingContext.get();
         Object key = shardingResult == null ? null : shardingResult.getTargetDataSourceName();
-        log.info("determineCurrentLookupKey: {}", key);
+        log.info(">>> determineCurrentLookupKey: {}", key);
         return key;
     }
 }
